@@ -4,6 +4,7 @@ let englishScore = 75;
 let compsciScore = 50;
 let bioScore = 30;
 let totalsubjects = 4;
+
 function totalscore (math,english,compSci, bio) {
     return math + english + compSci + bio;
 }
@@ -49,7 +50,7 @@ function distinction(average) {
 }
 console.log (school_name)
 console.log (mathScore)
-console.log (englishScore)\
+console.log (englishScore)
 console.log (compsciScore)
 console.log (bioScore)
 console.log (totalscore(mathScore, englishScore, compsciScore, bioScore))
@@ -65,13 +66,55 @@ let student2 = {name: "John", mathScore: 80, englishScore: 70, compsciScore: 60,
 console.log(student2);
 let student3 = {name: "Jane", mathScore: 70, englishScore: 60, compsciScore: 50, bioScore: 40};
 console.log(student3);
+let totalscore1;
+totalscore1 = totalscore(
+    student1.mathScore,
+    student1.englishScore,
+    student1.compsciScore,
+    student1.bioScore
+);
+let totalscore2;
+totalscore2 = totalscore(
+    student2.mathScore,
+    student2.englishScore,
+    student2.compsciScore,
+    student2.bioScore
+);
+let totalscore3;
+totalscore3 = totalscore(
+    student3.mathScore,
+    student3.englishScore,
+    student3.compsciScore,
+    student3.bioScore
+);
+let averageScore1;
+averageScore1 = averagescore(totalscore1, totalsubjects);
+let averageScore2;
+averageScore2 = averagescore(totalscore2, totalsubjects);
+let averageScore3;
+averageScore3 = averagescore(totalscore3, totalsubjects);
+let grade1;
+grade1 = grade(averageScore1);
+let grade2;
+grade2 = grade(averageScore2);
+let grade3;
+grade3 = grade(averageScore3);
+result1 = getresult(averageScore1);
+result2 = getresult(averageScore2);
+result3 = getresult(averageScore3); 
+validScore1 = validscore(totalscore1);
+validScore2 = validscore(totalscore2);
+validScore3 = validscore(totalscore3);
+distinction1 = distinction(averageScore1);
+distinction2 = distinction(averageScore2);
+distinction3 = distinction(averageScore3);
 return {
     name: student1.name,
     mathScore: student1.mathScore,
     englishScore: student1.englishScore,
     compsciScore: student1.compsciScore,
     bioScore: student1.bioScore,
-    totalScore: totalScore1,
+    totalscore: totalscore1,
     averageScore: averageScore1,
     grade: grade1,
     result: result1,
@@ -84,7 +127,7 @@ return{
    englishScore: student2.englishScore,
     compsciScore: student2.compsciScore,
     bioScore: student2.bioScore,
-    totalScore: totalScore2,
+    totalscore: totalscore2,
     averageScore: averageScore2,
     grade: grade2,
     result: result2,
@@ -97,7 +140,7 @@ return {
     englishScore: student3.englishScore,
     compsciScore: student3.compsciScore,
     bioScore: student3.bioScore,
-    totalScore: totalScore3,
+    totalscore: totalscore3,
     averageScore: averageScore3,
     grade: grade3,
     result: result3,
